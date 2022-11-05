@@ -22,5 +22,5 @@ PUT {{api}}/1
 Content-Type: application/json
 
 {
-    "description": "Esta si",
+    "title": "a ver 1"
 }
