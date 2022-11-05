@@ -9,17 +9,58 @@ import {
   updateTask,
 } from "../controllers/tasks.js";
 
-//Get all tasks
+/**
+ * @swagger
+ * /tasks:
+ * get: 
+ *    summary: Get all tasks
+ *    tags: [Tasks]
+ */
 router.get("/tasks", getTasks);
-//Get number tasks
+
+/**
+ * @swagger
+ * /tasks/count:
+ * get: 
+ *    summary: Get total task counter
+ *    tags: [Tasks]
+ */
 router.get("/tasks/count", getTaskCounter);
-//Get a task
+
+/**
+ * @swagger
+ * /tasks:
+ * get:
+ *    summary: Get a task by id
+ *    tags: [Tasks]
+ */
 router.get("/tasks/:id", getTask);
-//Create a task
+
+/**
+ * @swagger
+ * /tasks:
+ * post: 
+ *    summary: Create a task
+ *    tags: [Tasks]
+ */
 router.post("/tasks", createTask);
-//Delete a task
+
+/**
+ * @swagger
+ * /tasks:
+ * delete: 
+ *    summary: Delete a task by id
+ *    tags: [Tasks]
+ */
 router.delete("/tasks/:id", deleteTask);
-//Update a task
+
+/**
+ * @swagger
+ * /tasks:
+ * put: 
+ *    summary: Update a task by id
+ *    tags: [Tasks]
+ */
 router.put("/tasks/:id", updateTask);
 
 export default router;
